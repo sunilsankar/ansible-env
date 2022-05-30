@@ -1,0 +1,13 @@
+cryptography<3.4.0
+ansible==2.10.5
+passlib
+selinux
+lxml
+ansible-lint==4.3.7
+molecule==3.2.0
+molecule_docker==0.3.3
+molecule_podman==0.3.0
+pytest-testinfra
+flake8
+pylint
+yamllint==1.25.0
