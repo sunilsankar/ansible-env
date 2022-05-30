@@ -45,7 +45,7 @@ end
       node.vm.network "private_network", ip: "192.168.16.10#{i}"
 
       node.vm.provider :virtualbox do |v|
-        v.name    = "kworker#{i}"
+        v.name    = "node#{i}"
         v.memory  = 1024
         v.cpus    = 1
       end
