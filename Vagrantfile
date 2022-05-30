@@ -13,7 +13,7 @@ Vagrant.configure(2) do |config|
    
   config.vm.provision "shell", path: "tasks/install.sh"
     node.vm.box               = "almalinux/8"
-    node.vm.box_check_update  = true
+    node.vm.box_check_update  = false
     node.vm.hostname          = "ansible.example.com"
 
     node.vm.network "private_network", ip: "192.168.16.100"
@@ -39,7 +39,6 @@ end
 
       node.vm.box               = "almalinux/8"
       node.vm.box_check_update  = false
-      node.vm.box_version       = "3.3.0"
       node.vm.hostname          = "node#{i}.example.com"
 
       node.vm.network "private_network", ip: "192.168.16.10#{i}"
