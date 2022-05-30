@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
   # Ansible Master Server
   config.vm.define "ansiblemaster" do |node|
    
-  config.vm.provision "shell", path: "tasks/install.sh"
+  
     node.vm.box               = "almalinux/8"
     node.vm.box_check_update  = false
     node.vm.hostname          = "ansible.example.com"
@@ -29,7 +29,7 @@ Vagrant.configure(2) do |config|
       v.nested  = true
       v.cpus    = 2
     end
-
+    node.vm.provision "shell", path: "tasks/install.sh"
 end
   NodeCount = 2
 
